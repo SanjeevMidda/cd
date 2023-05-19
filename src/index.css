@@ -1,0 +1,39 @@
+*{
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.App{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cd{
+  width: 30px;
+  height: 390px;
+  border: 1px solid grey;
+  text-align: center;
+  transform:skewX(20deg);
+  /* animation: transform 1s infinite linear alternate-reverse; */
+  position: relative;
+  transition: all 1s;
+  z-index: 10;
+}
+
+.transformed{
+  width: 490px;
+  transform: skewX(0deg);
+  transition: all 1s;
+}
+
+@keyframes transform{
+  0%{transform: skewX(20deg); width:
+    30px;}
+  /* 25%{transform: skewX(40deg);}
+  50%{transform: skewX(60deg);}
+  75%{transform: skewX(80deg);} */
+  100%{transform: skewX(0deg); width:490px;}
+}
